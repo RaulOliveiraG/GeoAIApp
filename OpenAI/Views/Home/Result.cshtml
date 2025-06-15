@@ -1,0 +1,21 @@
+﻿@model GeoAIApp.Models.GeoResult
+
+<h2>Resultado</h2>
+@if (Model.City == "Erro")
+{
+    <div>Houve erro: @Model.Description</div>
+}
+else
+{
+    <ul>
+        <li><strong>Cidade:</strong> @Model.City</li>
+        <li><strong>Descrição:</strong> @Model.Description</li>
+        <li><strong>Latitude:</strong> @Model.Latitude</li>
+        <li><strong>Longitude:</strong> @Model.Longitude</li>
+    </ul>
+    <iframe width="600" height="450" style="border:0" loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps?q=@Model.Latitude,@Model.Longitude&hl=es;z=14&amp;output=embed">
+    </iframe>
+}
+<a href="/">Voltar</a>

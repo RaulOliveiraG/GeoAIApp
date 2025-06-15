@@ -1,0 +1,11 @@
+﻿@model GeoAIApp.Models.GeoRequest
+
+<form asp-action="Result" method="post">
+    <label>Cidade:</label>
+    <input asp-for="City" required />
+    <br/>
+    <label>Mensagem:</label>
+    <textarea asp-for="Message" required></textarea>
+    <br/>
+    <button type="submit">Consultar</button>
+</form>

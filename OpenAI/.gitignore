@@ -1,0 +1,4 @@
+# IGNORAR CONFIGS DE DEV
+appsettings.Development.json
+appsettings.Local.json
+appsettings.json
